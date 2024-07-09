@@ -1,6 +1,6 @@
 
 nav{
-  padding: 10px 2%;
+  padding: 10px 0.5%;
   justify-content: space-around;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background: #fff;
@@ -38,4 +38,14 @@ nav{
 .nav-right .user-icon{
   width: 35px;
   border-radius: 50%;
+}
+
+.nav-right {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-left {
+  width: 30%;
 }
