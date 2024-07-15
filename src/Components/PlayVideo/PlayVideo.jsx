@@ -39,17 +39,58 @@ const PlayVideo = () => {
         <hr />
         <h4>130 comments</h4>
         <div className="comment">
-          <img src={user_profile} alt=""></img>
+          <img src={user_profile} alt=""/>
           <div>
             <h3>Jack Nicholson<span>1 day ago</span></h3>
             <p>A global computer network providing a variety of information and commuincation of interconnected networks using standardizedcommunication protocols.</p>
             <div className='comment-action'>
-
+              <img src={like} alt=""/>
+              <span>244</span>
+              <img src={dislike} alt=""/>
             </div>
-          </div>
-        
-                       
+          </div>                          
         </div>
+
+        <div className="comment">
+          <img src={user_profile} alt=""/>
+          <div>
+            <h3>Jack Nicholson<span>1 day ago</span></h3>
+            <p>A global computer network providing a variety of information and commuincation of interconnected networks using standardizedcommunication protocols.</p>
+            <div className='comment-action'>
+              <img src={like} alt=""/>
+              <span>244</span>
+              <img src={dislike} alt=""/>
+            </div>
+          </div>                          
+        </div>
+        
+        <div className="comment">
+          <img src={user_profile} alt=""/>
+          <div>
+            <h3>Jack Nicholson<span>1 day ago</span></h3>
+            <p>A global computer network providing a variety of information and commuincation of interconnected networks using standardizedcommunication protocols.</p>
+            <div className='comment-action'>
+              <img src={like} alt=""/>
+              <span>244</span>
+              <img src={dislike} alt=""/>
+            </div>
+          </div>                          
+        </div>
+        
+        <div className="comment">
+          <img src={user_profile} alt=""/>
+          <div>
+            <h3>Jack Nicholson<span>1 day ago</span></h3>
+            <p>A global computer network providing a variety of information and commuincation of interconnected networks using standardizedcommunication protocols.</p>
+            <div className='comment-action'>
+              <img src={like} alt=""/>
+              <span>244</span>
+              <img src={dislike} alt=""/>
+            </div>
+          </div>                          
+        </div>
+        
+
       </div>
     </div>
   )
