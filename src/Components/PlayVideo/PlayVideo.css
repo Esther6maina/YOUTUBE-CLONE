@@ -8,6 +8,7 @@
   margin-top: 10px;
   font-weight: 600;
   font-size: 22px;
+  color: #fff;
 }
 .play-video-info{
   display: flex;
@@ -16,7 +17,7 @@
   flex-wrap: wrap;
   margin-top: 10px;
   font-size: 14px;
-  color: #5a5a5a;
+  color: #fff;
 }
 .play-video-info img{
   width: 20px;
@@ -48,13 +49,13 @@
   margin-right: 15px;
 }
 .publisher div p{
-  color: #000;
+  color: #fff;
   font-weight: 600;
   font-size: 18px;
 }
 .publisher div span{
   font-size: 13px;
-  color: #5a5a5a;
+  color: #fff;
 }
 .publisher button{
   background: red;
@@ -72,11 +73,11 @@
 .vid-description p{
   font-size: 14px;
   margin-bottom: 5px;
-  color: #5a5a5a;
+  color: #fff;
 }
 .vid-description h4{
   font-size: 14px;
-  color: #5a5a5a;
+  color: #fff;
   margin-top: 15px;
 }
 .comment{
@@ -92,10 +93,11 @@
 .comment h3{
   font-size: 14px;
   margin-bottom: 2px;
+  color: #fff;
 }
 .comment h3 span{
   font-size: 13px;
-  color: #5a5a5a;
+  color: #fff;
   font-weight: 500;
   margin-left: 8px;
 }
@@ -112,5 +114,5 @@
 }
 .comment-action span{
   margin-right: 20px;
-  color: #5a5a5a;
+  color: #fff;
 }

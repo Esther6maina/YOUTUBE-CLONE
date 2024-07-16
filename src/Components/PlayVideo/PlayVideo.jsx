@@ -54,7 +54,7 @@ const PlayVideo = () => {
         <div className="comment">
           <img src={user_profile} alt=""/>
           <div>
-            <h3>Jack Nicholson<span>1 day ago</span></h3>
+            <h3>Sophie Love<span>1 day ago</span></h3>
             <p>A global computer network providing a variety of information and commuincation of interconnected networks using standardizedcommunication protocols.</p>
             <div className='comment-action'>
               <img src={like} alt=""/>
@@ -67,8 +67,9 @@ const PlayVideo = () => {
         <div className="comment">
           <img src={user_profile} alt=""/>
           <div>
-            <h3>Jack Nicholson<span>1 day ago</span></h3>
-            <p>A global computer network providing a variety of information and commuincation of interconnected networks using standardizedcommunication protocols.</p>
+            <h3>DevLover123<span>1 day ago</span></h3>
+            <p>This channel is a game-changer for anyone looking to learn web development! The tutorials are clear, concise, and packed with valuable information.
+            </p>
             <div className='comment-action'>
               <img src={like} alt=""/>
               <span>244</span>
@@ -80,8 +81,9 @@ const PlayVideo = () => {
         <div className="comment">
           <img src={user_profile} alt=""/>
           <div>
-            <h3>Jack Nicholson<span>1 day ago</span></h3>
-            <p>A global computer network providing a variety of information and commuincation of interconnected networks using standardizedcommunication protocols.</p>
+            <h3>CodeMaster456<span>1 day ago</span></h3>
+            <p>The step-by-step guides on React and Node.js have been incredibly helpful for my career transition into web development. 
+            </p>
             <div className='comment-action'>
               <img src={like} alt=""/>
               <span>244</span>

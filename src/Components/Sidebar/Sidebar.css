@@ -1,5 +1,5 @@
 .sidebar{
-  background: #fff;
+  background: #131212;
   width: 15%;
   height: 100vh;
   position: fixed;
@@ -19,22 +19,26 @@
   flex-wrap: wrap;
   cursor: pointer;
 }
+.side-link p{
+  color: #fff;
+}
 .sidebar hr{
   border: 0;
   height: 1px;
-  background: #ccc;
+  background: #ff0000;
   width: 85%;
 }
 .subscribed-list h3{
   font-size: 13px;
   margin: 20px 0;
-  color: #5a5a5a;
+  color: #ff0000;
 }
 .small-sidebar{
   width: 5%;
 }
 .small-sidebar p{
   display: none;
+  
 }
 .small-sidebar h3{
   display: none;

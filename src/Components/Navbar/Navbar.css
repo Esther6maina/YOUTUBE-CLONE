@@ -3,7 +3,7 @@ nav{
   padding: 10px 0.5%;
   justify-content: space-around;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background: #fff;
+  background: #0c0c0c;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -13,14 +13,18 @@ nav{
   width: 22px;
   margin-right: 25px;
 }
+
 .nav-left .logo{
   width: 130px;
 }
 .nav-middle .search-box{
-  border: 1px solid #ccc;
+  border: 1px solid #f7fafa;
   margin-right: 15px;
   padding: 8px 12px;
   border-radius: 25px; 
+}
+.nav-middle .search-box{
+  background: #fff;
 }
 .nav-middle .search-box input{
   width: 400px;
