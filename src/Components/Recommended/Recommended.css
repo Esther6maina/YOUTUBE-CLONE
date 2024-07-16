@@ -17,4 +17,8 @@
 .vid-info h4{
   font-size: 13px;
   margin-bottom: 5px;
+  color: #0e0d0d;
+}
+.vid-info p{
+  color: #3b3737;
 }

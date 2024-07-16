@@ -1,5 +1,5 @@
 .sidebar{
-  background: #131212;
+  background: #f5f3f3;
   width: 15%;
   height: 100vh;
   position: fixed;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 .side-link p{
-  color: #fff;
+  color: #2c2525;
 }
 .sidebar hr{
   border: 0;
@@ -46,4 +46,8 @@
 .small-sidebar hr{
   width: 50%;
   margin-bottom: 25px;
+}
+.side-link.active img{
+  padding-bottom: 2px;
+  border-bottom: 3px solid red;
 }
