@@ -25,13 +25,12 @@
 .sidebar hr{
   border: 0;
   height: 1px;
-  background: #ff0000;
+  background: #6b6666;
   width: 85%;
 }
 .subscribed-list h3{
   font-size: 13px;
   margin: 20px 0;
-  color: #ff0000;
 }
 .small-sidebar{
   width: 5%;
@@ -48,5 +47,5 @@
 }
 .side-link.active img{
   padding-bottom: 2px;
-  border-bottom: 3px solid red;
+  border-bottom: 3px solid rgb(185, 53, 53);
 }
