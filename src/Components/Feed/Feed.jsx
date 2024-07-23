@@ -1,133 +1,89 @@
 import React, { useEffect, useState } from 'react';
 import './Feed.css'
-import thumbnail1 from '../../assets/thumbnail1.png'
-import thumbnail2 from '../../assets/thumbnail2.png'
-import thumbnail3 from '../../assets/thumbnail3.png'
-import thumbnail4 from '../../assets/thumbnail4.png'
-import thumbnail5 from '../../assets/thumbnail5.png'
-import thumbnail6 from '../../assets/thumbnail6.png'
-import thumbnail7 from '../../assets/thumbnail7.png'
-import thumbnail8 from '../../assets/thumbnail8.png'
 import { Link } from 'react-router-dom'
 import { API_KEY } from '../../Data'
+import Navbar from '../Navbar/Navbar';
 
 const Feed = ({category}) => {
 
   const [data,setData] = useState([]);
+  
 
-  const fetchData = async () =>{
+  const fetchData = async (query) =>{
 
-      const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
-      await fetch(videoList_url).then(response=>response.json()).then(data=>setData(data.items))
+      const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
 
+      if (query) {
+        videoList_url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${query}&key=${API_KEY}`;
+      }
+   
+      await fetch(videoList_url)
+      .then(response=>response.json())
+      .then(data=> {
+        if (query) {
+          setData(data.items);
+        }
+        else {
+          setData(data.items);
+        }
+
+      });
   }; 
+
+  const handleSearch = () =>{
+    fetchData(searchTerm);
+  };
+
   useEffect(()=>{
     fetchData();
   },[category])
 
+  console.log(data, "----28----")
+  
   return (
+    <div>
+      {/* Pass the search handler to Navbar */}
+      <Navbar setSidebar={() => {}} onSearch={fetchData} />
 
-    <div className="feed">    
-      <Link to={`/video/20/4521`} className='card'>
-        <img src={thumbnail1} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </Link>
-      <div className='card'>
-        <img src={thumbnail2} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail3} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail4} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail5} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail6} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail7} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail8} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
+      <div className="feed">
+        {data.map((video) => {
+          const videoId = video.id.videoId || video.id; // Determine the video ID for different API responses
+          const thumbnailUrl =
+            video.snippet.thumbnails.standard?.url ||
+            video.snippet.thumbnails.high?.url ||
+            video.snippet.thumbnails.medium?.url ||
+            video.snippet.thumbnails.default?.url; // Determine the thumbnail URL for different resolutions
 
-      <div className='card'>
-        <img src={thumbnail1} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail2} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail3} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail4} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail5} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail6} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail7} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
-      </div>
-      <div className='card'>
-        <img src={thumbnail8} alt=""/>
-        <h2>Best channel to learn coding that help you to be a web developer</h2>
-        <h3>Greatstack</h3>
-        <p>15k views &bull; 2days ago</p>
+          return (
+            <Link to={`https://www.youtube.com/watch?v=${videoId}`} className='card' key={videoId}>
+              <img src={thumbnailUrl} alt={video.snippet.title} />
+              <h2>{video.snippet.title}</h2>
+              <h3>{video.snippet.channelTitle}</h3>
+              <p>{/* Include views and time ago if available */}</p>
+            </Link>
+          );
+        })}
       </div>
     </div>
+  );
+};
 
-  )
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+  
+ 
 export default Feed
