@@ -31,6 +31,7 @@ const Navbar = ({ setSidebar, onSearch }) => {
           alt="Menu Icon"
         />
         <img className='logo' src={logo} alt="Logo" />
+        <img className={`logo ${sidebarOpen ? 'hidden' : ''}`} src={logo} alt="Logo" />
       </div>
 
       <div className="nav-middle flex-div">

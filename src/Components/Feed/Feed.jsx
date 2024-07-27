@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Feed.css'
 import { Link } from 'react-router-dom'
 import { API_KEY } from '../../Data'
-import Navbar from '../Navbar/Navbar';
 
 const Feed = ({category}) => {
 
@@ -42,9 +41,6 @@ const Feed = ({category}) => {
   
   return (
     <div>
-      {/* Pass the search handler to Navbar */}
-      <Navbar setSidebar={() => {}} onSearch={fetchData} />
-
       <div className="feed">
         {data.map((video) => {
           const videoId = video.id.videoId || video.id; // Determine the video ID for different API responses
@@ -67,23 +63,6 @@ const Feed = ({category}) => {
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-  
+ 
  
 export default Feed
