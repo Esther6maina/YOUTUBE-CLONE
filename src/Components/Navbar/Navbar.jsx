@@ -8,7 +8,7 @@ import moreIcon from '../../assets/more.png';
 import notificationIcon from '../../assets/notification.png';
 import profileIcon from '../../assets/jack.png';
 
-const Navbar = ({ setSidebar, onSearch }) => {
+const Navbar = ({ setSidebar, sidebarOpen, onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleInputChange = (e) => {
