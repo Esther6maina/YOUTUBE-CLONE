@@ -30,7 +30,7 @@ const Navbar = ({ setSidebar, sidebarOpen, onSearch }) => {
           src={menuIcon}
           alt="Menu Icon"
         />
-        <img className='logo' src={logo} alt="Logo" />
+        {/* <img className='logo' src={logo} alt="Logo" /> */}
         <img className={`logo ${sidebarOpen ? 'hidden' : ''}`} src={logo} alt="Logo" />
       </div>
 
